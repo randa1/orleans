@@ -54,6 +54,7 @@
     <Compile Include="CircularStateTestGrain.cs" />
     <Compile Include="ActivateDeactivateWatcherGrain.cs" />
     <Compile Include="ExceptionGrain.cs" />
+    <Compile Include="ExternalTypeGrain.cs" />
     <Compile Include="FaultableConsumerGrain.cs" />
     <Compile Include="EventSourcing\PersonState.cs" />
     <Compile Include="GeneratedEventCollectorGrain.cs" />
@@ -106,6 +107,10 @@
     <ProjectReference Include="..\Orleans\Orleans.csproj">
       <Project>{BC1BD60C-E7D8-4452-A21C-290AEC8E2E74}</Project>
       <Name>Orleans</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TesterExternalModels\TesterExternalModels.csproj">
+      <Project>{474735cf-54f7-4f6e-a125-8b3adc0af778}</Project>
+      <Name>TesterExternalModels</Name>
     </ProjectReference>
     <ProjectReference Include="..\TestGrainInterfaces\TestGrainInterfaces.csproj">
       <Project>{3972213f-189b-41d4-90fe-38d513c1106d}</Project>
