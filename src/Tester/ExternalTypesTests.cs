@@ -54,17 +54,17 @@ namespace UnitTests.General
             StopAllSilos();
         }
         
-        [Ignore, TestMethod, TestCategory("BVT"), TestCategory("Functional"), TestCategory("Serialization")]
+        [TestMethod, TestCategory("BVT"), TestCategory("Functional"), TestCategory("Serialization")]
         public async Task ExternalTypesTest_GrainWithAbstractExternalTypeParam()
         {
             // This solves the problem:
-            //SerializationManager.Register(typeof(AbstractModel));
+            //SerializationManager.Register(typeof(ConcreteModel));
 
             var grainWitAbstractTypeParam = GrainClient.GrainFactory.GetGrain<IExternalTypeGrain>(0);
             await grainWitAbstractTypeParam.GetAbstractModel(new List<AbstractModel>() {new ConcreteModel()});
         }
 
-        [Ignore, TestMethod, TestCategory("BVT"), TestCategory("Functional"), TestCategory("Serialization")]
+        [TestMethod, TestCategory("BVT"), TestCategory("Functional"), TestCategory("Serialization")]
         public async Task ExternalTypesTest_GrainWithEnumxternalTypeParam()
         {
             // This solves the problem

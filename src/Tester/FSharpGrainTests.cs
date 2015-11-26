@@ -55,7 +55,7 @@ namespace UnitTests.General
             var id = Guid.NewGuid();
             var grain = GrainFactory.GetGrain<IGeneric1Argument<T>>(id, "UnitTests.Grains.Generic1ArgumentGrain");
             var output = await grain.Ping(input);
-            Assert.IsTrue(output.Equals(input));
+            Assert.AreEqual(input, output);
         }
 
         [TestMethod, TestCategory("BVT"), TestCategory("Functional"), TestCategory("Generics"), TestCategory("FSharp")]
