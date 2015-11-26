@@ -48,6 +48,7 @@
     <Compile Include="ICircularStateTestGrain.cs" />
     <Compile Include="IActivateDeactivateWatcherGrain.cs" />
     <Compile Include="IExceptionGrain.cs" />
+    <Compile Include="IExternalTypeGrain.cs" />
     <Compile Include="IFaultableConsumerGrain.cs" />
     <Compile Include="IGeneratorTestDerivedDerivedGrain.cs" />
     <Compile Include="IGeneratorTestDerivedGrain1.cs" />
@@ -84,6 +85,10 @@
     <ProjectReference Include="..\Orleans\Orleans.csproj">
       <Project>{BC1BD60C-E7D8-4452-A21C-290AEC8E2E74}</Project>
       <Name>Orleans</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TesterExternalModels\TesterExternalModels.csproj">
+      <Project>{474735cf-54f7-4f6e-a125-8b3adc0af778}</Project>
+      <Name>TesterExternalModels</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
