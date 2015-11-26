@@ -55,7 +55,7 @@ namespace UnitTests.General
         {
             var input = FSharpOption<int>.None;
             var output = SerializationManager.RoundTripSerializationForTesting(input);
-            Assert.IsTrue(output.Equals(input));
+            Assert.AreEqual(input, output);
         }
 
         [TestMethod, TestCategory("BVT"), TestCategory("Functional"), TestCategory("FSharp"), TestCategory("Serialization")]
