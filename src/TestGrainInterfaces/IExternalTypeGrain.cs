@@ -28,9 +28,6 @@ using TesterExternalModels;
 
 namespace UnitTests.GrainInterfaces
 {
-    using Orleans.CodeGeneration;
-/*
-    [KnownType(typeof(ConcreteModel))]*/
     public interface IExternalTypeGrain : IGrainWithIntegerKey
     {
         Task GetAbstractModel(IEnumerable<AbstractModel> list);
